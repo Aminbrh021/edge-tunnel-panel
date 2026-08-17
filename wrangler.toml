@@ -1,0 +1,15 @@
+name = "edge-tunnel-panel"
+main = "worker.js"
+compatibility_date = "2026-07-10"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Change this before deployment. ADMIN_PASSWORD is only used to initialize the D1 admin hash.
+ADMIN_PASSWORD = "CHANGE_THIS_PASSWORD"
+# Use a long random value; this is the cookie session secret/value for the demo implementation.
+ADMIN_SESSION = "CHANGE_THIS_SESSION_VALUE"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "edge-tunnel-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
